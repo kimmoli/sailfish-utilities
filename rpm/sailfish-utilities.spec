@@ -20,15 +20,15 @@ BuildRequires: cmake >= 2.8
 BuildRequires: qt5-default
 BuildRequires: qt5-qttools
 BuildRequires: qt5-qttools-linguist
-Requires: sailfish-utilities-all-translations
+#Requires: sailfish-utilities-all-translations
 
 %description
 Miscellaneous Sailfish Utilities
 
-%package ts-devel
-Summary: Translation source for %{name}
-%description ts-devel
-Translation source for %{name}
+#%package ts-devel
+#Summary: Translation source for %{name}
+#%description ts-devel
+#Translation source for %{name}
 
 %prep
 %setup -q
@@ -55,6 +55,6 @@ rm -rf %{buildroot}
 %{_datadir}/lipstick/notificationcategories/x-sailfish.sailfish-utilities.error.conf
 %{_datadir}/lipstick/notificationcategories/x-sailfish.sailfish-utilities.info.conf
 
-%files ts-devel
-%defattr(-,root,root,-)
-%{_datadir}/translations/source/settings-sailfish_utilities.ts
+#%files ts-devel
+#%defattr(-,root,root,-)
+#%{_datadir}/translations/source/settings-sailfish_utilities.ts
