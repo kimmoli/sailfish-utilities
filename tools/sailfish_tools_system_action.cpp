@@ -69,6 +69,9 @@ std::map<std::string, action_type> actions = {
         }},
     { "restart_network", [](action_ctx const *) {
             return execute_own_utility("restart_network.sh");
+        }},
+    { "restart_as_daemon", [](action_ctx const *) {
+            return execute_own_utility("restart_as-daemon.sh");
         }}
 };
 

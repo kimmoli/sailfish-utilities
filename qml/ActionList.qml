@@ -108,5 +108,17 @@ Column {
                 });
             }
         }
+
+		ActionItem {
+			actionName: "Restart exchange"
+			description: "Restarts exchange if sync fails"
+			deviceLockRequired: false
+
+			function action(on_reply, on_error) {
+                tools.request("restartExchange", {}, {
+                    on_reply: on_reply, on_error: on_error
+                });
+            }
+		}
     }
 }
