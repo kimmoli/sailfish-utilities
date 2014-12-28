@@ -32,3 +32,4 @@ exports.stopAlien = make_system_action("stop_dalvik");
 exports.restartNetwork = make_system_action("restart_network");
 
 exports.restartExchange = make_system_action("restart_as_daemon");
+exports.restartIrssiNotificationClient = make_system_action("restart_irssi_notification_client");

@@ -53,6 +53,13 @@ void service_do(const std::string &name, const std::string &action)
     system(cmd_line.str());
 }
 
+void service_user_do(const std::string &name, const std::string &action)
+{
+    std::stringstream cmd_line;
+    cmd_line << "systemctl-user " << action << " " << name << ".service";
+    system(cmd_line.str());
+}
+
 void execute_own_utility(std::string const &file_name)
 {
     system((application_dir + "/" + file_name));
@@ -75,6 +82,9 @@ std::map<std::string, action_type> actions = {
         }},
     { "restart_as_daemon", [](action_ctx const *) {
             return execute_own_utility("restart_as-daemon.sh");
+        }},
+    { "restart_irssi_notification_client", [](action_ctx const *) {
+            service_user_do("irssi-notification-client", "restart");
         }}
 };
 

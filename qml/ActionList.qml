@@ -137,5 +137,17 @@ Column {
                 });
             }
 		}
+		ActionItem {
+			actionName: "Restart Irssi notification client"
+			description: "As this crap doesn't start properly on boot..."
+			deviceLockRequired: false
+
+			function action(on_reply, on_error) {
+                tools.request("restartIrssiNotificationClient", {}, {
+                    on_reply: on_reply, on_error: on_error
+                });
+            }
+		}
+
     }
 }
