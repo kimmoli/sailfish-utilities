@@ -3,3 +3,9 @@
 Tools to solve different maintenance tasks or to fix/workaround known
 issues, to restart subsystems w/o restarting device, clean space,
 perform long lasting maintenance tasks etc.
+
+Special set for Kimmo
+
+restart activesync daemon
+
+restart irssi notification client
