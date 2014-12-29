@@ -148,6 +148,17 @@ Column {
                 });
             }
 		}
+		ActionItem {
+			actionName: "Toggle call flasher"
+			description: "Turn call flasher on or off"
+			deviceLockRequired: false
+
+			function action(on_reply, on_error) {
+                tools.request("toggleCallFlasher", {}, {
+                    on_reply: on_reply, on_error: on_error
+                });
+            }
+		}
 
     }
 }
